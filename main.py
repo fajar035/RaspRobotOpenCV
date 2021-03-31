@@ -196,7 +196,7 @@ if capture.isOpened():
 
 while True:
     ret, input_layar = capture.read()
-    processing_image = processamento(entrada)
+    processing_image = processing(input_layar)
     moments = cv2.moments(processing_image, True)
     area = moments['m00']
     if moments['m00'] >= minArea:
